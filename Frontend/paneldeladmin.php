@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SIBO - Panel de Administrador</title>
-    <link rel="stylesheet" href="../CSS/estilodeladmin.css">
+    <link rel="stylesheet" href="../Frontend/css/estilodeladmin.css">
 </head>
 <body>
     <header>
@@ -16,17 +16,17 @@
     <form action="insert_herramienta.php" method="post">
         <label for="nombre">Nombre de la Herramienta:</label>
         <input type="text" id="nombre" name="nombre" required>
-    
+
         <label for="cantidad">Cantidad:</label>
         <input type="text" id="cantidad" name="cantidad" required>
-    
+
         <button type="submit">Agregar Herramienta</button>
     </form>
-    
+
     <form action="delete_herramienta.php" method="post">
         <label for="id">ID de la Herramienta a Eliminar:</label>
         <input type="number" id="id" name="id" required>
-    
+
         <button type="submit">Eliminar Herramienta</button>
     </form>
     <footer>

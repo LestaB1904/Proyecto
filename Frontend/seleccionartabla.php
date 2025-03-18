@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seleccionar Tabla</title>
-    <link rel="stylesheet" href="../CSS/estilosdeseleccionatabla.css">
+    <link rel="stylesheet" href="../Frontend/css/estilosdeseleccionatabla.css">
     <style>
         /* Incluye aquí el CSS proporcionado anteriormente */
     </style>
