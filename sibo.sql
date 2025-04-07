@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 17, 2025 at 03:49 AM
+-- Generation Time: Apr 07, 2025 at 04:51 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -33,6 +33,14 @@ CREATE TABLE `herramientas` (
   `Cantidad` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `herramientas`
+--
+
+INSERT INTO `herramientas` (`ID`, `Nombre_Herramienta`, `Cantidad`) VALUES
+(8, 'Martillo', '4'),
+(11, 'clavos', '5');
+
 -- --------------------------------------------------------
 
 --
@@ -44,6 +52,14 @@ CREATE TABLE `maquinas` (
   `Tipo_Maquina` varchar(100) NOT NULL,
   `Marca` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `maquinas`
+--
+
+INSERT INTO `maquinas` (`ID`, `Tipo_Maquina`, `Marca`) VALUES
+(1, 'Niveladora', 'Jhon deree'),
+(4, 'Excavadora', 'Caterpillar');
 
 -- --------------------------------------------------------
 
@@ -59,6 +75,13 @@ CREATE TABLE `movimientos` (
   `ID_Maquina` int(11) DEFAULT NULL,
   `Fecha` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `movimientos`
+--
+
+INSERT INTO `movimientos` (`ID`, `ID_Usuario`, `ID_Herramienta`, `ID_Repuesto`, `ID_Maquina`, `Fecha`) VALUES
+(1, 2, 8, NULL, NULL, '2025-04-07 02:18:26');
 
 -- --------------------------------------------------------
 
@@ -86,6 +109,15 @@ CREATE TABLE `usuarios` (
   `Telefono` int(11) DEFAULT NULL,
   `Tipo_Usuario` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `usuarios`
+--
+
+INSERT INTO `usuarios` (`ID`, `Nombre`, `Cedula`, `Telefono`, `Tipo_Usuario`) VALUES
+(1, 'Admin de prueba', 111, 88888888, 'admin'),
+(2, 'Lesther Barrantes', 604730163, 87691880, 'usuario'),
+(3, 'usuario de prueba', 222, 88888888, 'usuario');
 
 --
 -- Indexes for dumped tables
@@ -135,31 +167,31 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT for table `herramientas`
 --
 ALTER TABLE `herramientas`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `maquinas`
 --
 ALTER TABLE `maquinas`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `movimientos`
 --
 ALTER TABLE `movimientos`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `repuestos`
 --
 ALTER TABLE `repuestos`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Constraints for dumped tables
